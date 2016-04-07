@@ -1,6 +1,6 @@
 # Mage
 
-Mage can be used for making model creation wizards with step by step validations.
+Mage can be used for making model creation wizards with step by step validations in Rails.
 
 ## Installation
 
