@@ -7,7 +7,7 @@ Mage can be used for making model creation wizards with step by step validations
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'mage', git: 'git://github.com/effect305/mage.git'
+gem 'mage'
 ```
 
 And then execute:
