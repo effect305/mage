@@ -45,7 +45,7 @@ class ActiveRecord::Base
   end
 end
 
-class ApplicationController < ActionController::Base
+class ActionController::Base
   rescue_from Mage::WizardRendered, with: :mage_return
 
   def render_mage(object, options = {})
