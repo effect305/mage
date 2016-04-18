@@ -1,10 +1,12 @@
 class ActiveRecord::Base
   def self.has_mage_steps(*steps)
     @@mage_steps = steps
+    has_one :mage_step, class_name: 'Mage::MageStep', as: :object
+    scope :mage_done, -> { joins(:mage_step).where(mage_steps: { step: :done }) }
     after_save :mage_after_save
     after_destroy { Mage::MageStep.where(object_id: self.id, object_type: self.model_name.name).try(:take).try(:destroy) }
 
-    define_method :mage_steps do
+    def self.mage_steps
       @@mage_steps
     end
 

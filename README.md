@@ -99,6 +99,14 @@ render_mage method like this:
 render_mage(@product, show_step: true)
 ```
 
+To query only finished objects use 'mage_done' scope:
+
+```ruby
+def index
+    @products = product.mage_done
+end
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/effect305/mage.
