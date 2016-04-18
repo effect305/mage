@@ -13,10 +13,8 @@ class ActionController::Base
         if options[:show_step] && params[:step].blank?
           mage_redirect(object, options[:show_step])
         else
-          if flash["#{object.model_name.name.downcase}_errors"]
-            flash["#{object.model_name.name.downcase}_errors"].each do |attribute, errors|
-              errors.each { |error| object.errors[attribute] << error }
-            end
+          (flash["#{object.model_name.name.downcase}_errors"] || {}).each do |attribute, errors|
+            errors.each { |error| object.errors[attribute] << error }
           end
           render "#{params[:controller]}/steps/#{object.mage_step}"
         end
