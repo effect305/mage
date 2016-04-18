@@ -102,7 +102,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/effect
 ## ToDo
 
 I think there's a lot of stuff to do. Here's just examples:
-* Keep flash messages if showing step
+* ~~Keep flash messages if showing step~~
 * Generator
 * Tests
 
