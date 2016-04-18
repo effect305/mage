@@ -14,7 +14,11 @@ And then execute:
 
     $ bundle install
 
-After that migrate your database:
+After that generate migration:
+
+    $ rails g mage
+
+And migrate your database:
 
     $ rake db:migrate
 

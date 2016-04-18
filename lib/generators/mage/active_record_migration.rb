@@ -1,4 +1,4 @@
-class CreateMageSteps < ActiveRecord::Migration
+class ActiveRecordMigration < ActiveRecord::ActiveRecordMigration
   def change
     create_table :mage_steps do |t|
       t.belongs_to(:object, polymorphic: true)
